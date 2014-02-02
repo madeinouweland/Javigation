@@ -1,0 +1,7 @@
+<div id="root">
+    <h2 data-bind="text: PageName"></h2>
+    <p>All invoices for user: <span data-bind="text: UserName"></span></p>
+    <ul data-bind="foreach: Invoices">
+        <li data-bind="text: $data"></li>
+    </ul>
+</div>

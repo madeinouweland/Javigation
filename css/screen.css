@@ -1,0 +1,55 @@
+body
+{
+    background-color: #fff;
+    color: #2f2928;
+    font-family: "Helvetica Neue" , Helvetica, Arial;
+    line-height: 1.5em;
+}
+
+#canvas
+{
+    width: 960px;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #eee;
+}
+
+h1{
+    text-transform: uppercase;
+    font-size: 40px;
+
+}
+h2{
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+p{
+    margin: 10px 0px 10px 0px;
+}
+
+button
+{
+    width: 150px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+
+#content
+{
+    margin-top: 20px;
+    display: block;
+    padding: 20px;
+    background-color: #fff;
+}
+
+ul{
+    margin-top: 10px;
+}
+
+li
+{
+    border-bottom: 1px solid #ddd;
+    list-style: none;
+}

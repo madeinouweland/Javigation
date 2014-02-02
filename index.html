@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="author" content="Loek van den Ouweland">
+    <title>The Office</title>
+    <link rel="stylesheet" href="css/html5reset-1.6.1.css?v=1">
+    <link rel="stylesheet" href="css/screen.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="Lib/jquery-1.7.2.min.js"></script>
+    <script src="Lib/knockout-2.1.0.js"></script>
+    <script src="Models/User.js"></script>
+    <script src="app.js"></script>
+    <script src="index.js"></script>
+    <script src="helpers/navigation.js"></script>
+    <script src="ViewModels/IndexViewModel.js"></script>
+    <script src="ViewModels/CustomerViewModel.js"></script>
+    <script src="ViewModels/InvoiceViewModel.js"></script>
+</head>
+<body>
+<div id="canvas">
+    <h1 data-bind="text: AppName"></h1>
+
+    <p>Logged in as: <span data-bind="text: UserFullName"></span></p>
+    <button onclick='app.navigation.navigate("customers");'>Customers</button>
+    <button onclick='app.navigation.navigate("invoices");'>Invoices</button>
+    <div id="content">
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    app.initialize();
+    var canvas = document.getElementById("canvas");
+    ko.applyBindings(app.indexViewModel, canvas);
+    app.navigation=new Navigation("customers");
+</script>
+</html>
